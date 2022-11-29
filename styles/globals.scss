@@ -14,7 +14,7 @@ html {
 
 body {
   background-color: $main-clr;
-  color: $text-clr;
+  color: $text-clr-1;
 }
 
 ul,
@@ -23,10 +23,10 @@ ol {
 }
 
 a {
-  color: $text-clr;
+  color: $text-clr-1;
   text-decoration: none;
 }
 
 main {
-  margin-left: 120px;
+  padding-left: 120px;
 }

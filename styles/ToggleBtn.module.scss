@@ -1,0 +1,48 @@
+@import './assets.scss';
+
+$bar-clr: white;
+
+.btn {
+  position: absolute;
+  z-index: 999;
+  width: 25px;
+  height: 18px;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  display: none;
+
+  span {
+    width: 100%;
+    height: 1px;
+    background-color: $bar-clr;
+    transition: 300ms;
+  }
+
+  &.active {
+    justify-content: center;
+
+    span {
+      background-color: $acc-clr;
+      position: absolute;
+
+      &:nth-of-type(2) {
+        display: none;
+      }
+
+      &:nth-of-type(1) {
+        transform: rotate(45deg);
+      }
+
+      &:nth-of-type(3) {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
