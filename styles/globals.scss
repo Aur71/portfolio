@@ -1,0 +1,28 @@
+@import './assets.scss';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $main-clr;
+  color: $text-clr;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: $text-clr;
+  text-decoration: none;
+}
