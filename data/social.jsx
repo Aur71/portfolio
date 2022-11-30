@@ -7,7 +7,7 @@ export const social = [
     id: 1,
     name: 'github',
     icon: <AiFillGithub />,
-    path: '#',
+    path: 'https://github.com/Aur71',
   },
 
   {

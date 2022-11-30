@@ -13,7 +13,7 @@ export default function Home() {
 
       <p>Front End Developer</p>
 
-      <Link href='#'>View my work</Link>
+      <Link href='/work'>View my work</Link>
 
       <div
         data-hover={hoverActive}

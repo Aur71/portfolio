@@ -10,7 +10,9 @@ const Social = () => {
       {social.map((item) => {
         return (
           <li key={item.id}>
-            <a href={item.path}>{item.icon}</a>
+            <a target='_blank' href={item.path}>
+              {item.icon}
+            </a>
           </li>
         )
       })}

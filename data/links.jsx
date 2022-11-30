@@ -2,24 +2,24 @@ export const links = [
   {
     id: 1,
     name: 'work',
-    path: '#',
+    path: '/work',
   },
 
   {
     id: 2,
     name: 'skills',
-    path: '#',
+    path: '/skills',
   },
 
   {
     id: 3,
     name: 'about',
-    path: '#',
+    path: '/about',
   },
 
   {
     id: 4,
     name: 'contact',
-    path: '#',
+    path: '/contact',
   },
 ]

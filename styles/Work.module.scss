@@ -1,0 +1,40 @@
+@import './assets.scss';
+
+.work {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  @media only screen and (max-width: 800px) {
+    padding-top: 5rem;
+    align-items: flex-start;
+  }
+}
+
+.gridContainer {
+  width: 95%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+  gap: 100px;
+
+  .gridItem {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 1;
+    border: 1px solid green;
+  }
+
+  @media only screen and (max-width: 800px) {
+    gap: 50px;
+    grid-template-columns: 1fr;
+  }
+
+  @media only screen and (max-width: 500px) {
+    gap: 30px;
+    width: 100%;
+  }
+}
