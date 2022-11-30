@@ -5,10 +5,10 @@ $bar-clr: white;
 .btn {
   position: absolute;
   z-index: 999;
-  width: 25px;
-  height: 18px;
-  top: 10px;
-  left: 10px;
+  width: 30px;
+  height: 20px;
+  top: 1rem;
+  right: 1rem;
   cursor: pointer;
 
   display: flex;
@@ -18,11 +18,16 @@ $bar-clr: white;
 
   display: none;
 
+  @media only screen and (max-width: 800px) {
+    display: flex;
+  }
+
   span {
     width: 100%;
-    height: 1px;
+    height: 2px;
     background-color: $bar-clr;
     transition: 300ms;
+    box-shadow: 0 0 5px $bar-clr;
   }
 
   &.active {
@@ -30,6 +35,7 @@ $bar-clr: white;
 
     span {
       background-color: $acc-clr;
+      box-shadow: 0 0 5px $acc-clr;
       position: absolute;
 
       &:nth-of-type(2) {

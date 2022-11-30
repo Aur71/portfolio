@@ -1,8 +1,8 @@
 import styles from '../styles/ToggleBtn.module.scss'
-import { useState } from 'react'
+import { useGlobalContext } from '../context/GlobalContext'
 
 const ToggleBtn = () => {
-  const [showSidebar, setShowSidebar] = useState(false)
+  const { showSidebar, setShowSidebar } = useGlobalContext()
 
   return (
     <div
