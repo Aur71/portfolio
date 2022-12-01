@@ -1,12 +1,15 @@
 import styles from '../styles/Skills.module.scss'
 import Image from 'next/image'
 import { data } from '../data/skills'
+import { useGlobalContext } from '../context/GlobalContext'
 
 const skills = () => {
+  const { hoverIndex } = useGlobalContext()
+
   return (
     <section className={styles.skills}>
       <div className={styles.text}>
-        <h2>
+        <h2 data-index={hoverIndex}>
           Skills & <br /> Experience
         </h2>
 
