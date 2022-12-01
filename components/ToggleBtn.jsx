@@ -5,14 +5,14 @@ const ToggleBtn = () => {
   const { showSidebar, setShowSidebar } = useGlobalContext()
 
   return (
-    <div
+    <button
       className={`${styles.btn} ${showSidebar && styles.active}`}
       onClick={() => setShowSidebar(!showSidebar)}
     >
       <span></span>
       <span></span>
       <span></span>
-    </div>
+    </button>
   )
 }
 
