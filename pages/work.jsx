@@ -1,20 +1,31 @@
 import styles from '../styles/Work.module.scss'
+import { projects } from '../data/projects'
+import Image from 'next/image'
 
 const work = () => {
   return (
     <section className={styles.work}>
       <div className={styles.gridContainer}>
-        <div className={styles.gridItem}>
-          <div className={styles.btnContainer}>
-            <a href='#'>live</a>
-            <a href='#'>code</a>
-            <button>about</button>
-          </div>
-        </div>
+        {projects.map((project) => {
+          const { id, name, image, live, code, about } = project
 
-        <div className={styles.gridItem}></div>
-        <div className={styles.gridItem}></div>
-        <div className={styles.gridItem}></div>
+          return (
+            <div key={id} className={styles.gridItem}>
+              <div className={styles.imgContainer}>
+                <Image src={image} alt={name} />
+              </div>
+
+              <div className={styles.btnContainer}>
+                <a target='_blank' href={live}>
+                  live
+                </a>
+                <a target='_blank' href={code}>
+                  code
+                </a>
+              </div>
+            </div>
+          )
+        })}
       </div>
     </section>
   )

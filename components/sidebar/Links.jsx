@@ -14,6 +14,20 @@ const Links = () => {
   return (
     <ul className={styles.linksContainer}>
       {links.map((link, index) => {
+        if (link.name === 'resume') {
+          return (
+            <li
+              key={link.id}
+              onMouseOver={() => handleHover(index)}
+              onMouseLeave={() => setHoverActive(false)}
+            >
+              <a target='_blank' href={link.path}>
+                {link.name}
+              </a>
+            </li>
+          )
+        }
+
         return (
           <li
             key={link.id}

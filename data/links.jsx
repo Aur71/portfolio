@@ -22,4 +22,10 @@ export const links = [
     name: 'contact',
     path: '/contact',
   },
+
+  {
+    id: 5,
+    name: 'resume',
+    path: '#',
+  },
 ]

@@ -145,13 +145,40 @@ $logo-bk: black;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   padding: 2rem 0px;
+
+  span {
+    position: absolute;
+    top: 0;
+    color: $acc-clr;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
 
   li a {
     display: flex;
     font-size: 1.1rem;
     padding: 0.5rem;
     transition: 300ms;
+
+    &:hover {
+      color: $acc-clr;
+    }
+  }
+
+  button {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    transition: 300ms;
+    color: $text-clr-1;
+    cursor: pointer;
 
     &:hover {
       color: $acc-clr;

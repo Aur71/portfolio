@@ -6,7 +6,7 @@ const AppContext = React.createContext()
 const AppProvider = ({ children }) => {
   const [showSidebar, setShowSidebar] = useState(false)
   const [hoverActive, setHoverActive] = useState(false)
-  const [hoverIndex, setHoverIndex] = useState(5)
+  const [hoverIndex, setHoverIndex] = useState(null)
 
   return (
     <AppContext.Provider
