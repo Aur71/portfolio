@@ -1,5 +1,7 @@
+import styles from '../styles/About.module.scss'
+
 const about = () => {
-  return <div>about</div>
+  return <section className={styles.about}>about</section>
 }
 
 export default about
