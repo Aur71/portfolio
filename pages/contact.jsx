@@ -1,12 +1,14 @@
 import styles from '../styles/Contact.module.scss'
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
+import { MdEmail } from 'react-icons/md'
 
 const contact = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const form = useRef()
+  const [sendMessage, setSendMessage] = useState(false)
 
   const sendEmail = (e) => {
     e.preventDefault()
@@ -29,10 +31,19 @@ const contact = () => {
         }
       )
 
+    setSendMessage(true)
     setName('')
     setEmail('')
     setMessage('')
   }
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setSendMessage(false)
+    }, 3000)
+
+    return () => clearTimeout(timeout)
+  }, [sendEmail, sendMessage])
 
   return (
     <div className={styles.contact}>
@@ -88,7 +99,12 @@ const contact = () => {
           <span></span>
         </div>
 
-        <button type='submit'>Send</button>
+        <div className={styles.btnWrapper}>
+          <MdEmail
+            className={`${styles.icon} ${sendMessage && styles.active}`}
+          />
+          <button type='submit'>Send </button>
+        </div>
       </form>
     </div>
   )

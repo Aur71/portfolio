@@ -185,9 +185,38 @@
       height: 300px;
     }
 
+    .btnWrapper {
+      position: relative;
+
+      .icon {
+        position: absolute;
+        transition: 300ms;
+        z-index: 8;
+        font-size: clamp(2rem, 5vw, 3rem);
+        color: $acc-clr;
+        scale: 0;
+        right: 0;
+        bottom: 0;
+
+        &.active {
+          animation: send 3s linear forwards;
+          scale: 1;
+        }
+      }
+
+      @keyframes send {
+        0% {
+          transform: translateY(0);
+        }
+
+        100% {
+          transform: translateY(-100vh) rotate(3600deg);
+        }
+      }
+    }
+
     button {
       display: block;
-      background-color: transparent;
       text-transform: uppercase;
       color: $acc-clr;
       border: 1px solid $acc-clr;
@@ -202,6 +231,11 @@
       cursor: pointer;
       box-shadow: 0 0 5px $acc-clr;
       text-shadow: 0 0 5px $acc-clr;
+      background-color: $main-clr;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9;
 
       &::before {
         position: absolute;
