@@ -3,14 +3,16 @@
 .about {
   width: 100%;
   min-height: 100vh;
+  position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
-  position: relative;
   padding-left: clamp(2rem, 4vw, 6rem);
   padding-right: clamp(1rem, 4vw, 6rem);
+  padding-top: 2.5rem;
+  padding-bottom: 3.5rem;
 
   &::before {
     position: absolute;
@@ -30,8 +32,15 @@
     opacity: 0.3;
   }
 
+  @media only screen and (max-width: 650px) {
+    &::before,
+    &::after {
+      left: 5px;
+    }
+  }
+
   h2 {
-    font-size: clamp(2rem, 15vw, 4.5rem);
+    font-size: clamp(1.5rem, 14vw, 4.5rem);
     position: relative;
     color: $text-clr-3;
     transition: 300ms;
@@ -97,106 +106,99 @@
     }
   }
 
-  @media only screen and (max-width: 650px) {
-    &::before,
-    &::after {
-      left: 5px;
-    }
-  }
-
   @media only screen and (max-width: 400px) {
     .paragraphs {
       padding: 5px 0;
+
+      p {
+        font-size: 1rem;
+      }
     }
 
     h2 {
       padding: 5px 0;
     }
+  }
+}
 
-    .paragraphs p {
-      font-size: 1rem;
-    }
+#bkPatern {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.1) 9%,
+    transparent 9%
+  );
+  background-position: 0% 0%;
+  background-size: 12vmin 12vmin;
+  z-index: 1;
+  transition: 300ms;
+
+  &[data-hover='true'] {
+    background-size: 11vmin 11vmin;
+    opacity: 0.3;
   }
 
-  #bkPatern {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-image: radial-gradient(
-      rgba(255, 255, 255, 0.1) 9%,
-      transparent 9%
-    );
-    background-position: 0% 0%;
-    background-size: 12vmin 12vmin;
-    z-index: 1;
-    transition: 300ms;
-
-    &[data-hover='true'] {
-      background-size: 11vmin 11vmin;
-      opacity: 0.3;
-    }
-
-    &[data-index='0'] {
-      background-position: 0 -25%;
-    }
-
-    &[data-index='1'] {
-      background-position: 0 -50%;
-    }
-
-    &[data-index='2'] {
-      background-position: 0 -75%;
-    }
-
-    &[data-index='3'] {
-      background-position: 0 -100%;
-    }
-
-    &[data-index='4'] {
-      background-position: 0% -125%;
-    }
+  &[data-index='0'] {
+    background-position: 0 -25%;
   }
 
-  #bkImage {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    transition: 300ms;
+  &[data-index='1'] {
+    background-position: 0 -50%;
+  }
 
-    background-image: url('../public/about-bk.jpg');
-    background-repeat: no-repeat;
-    background-position: center 40%;
-    background-size: 110vmax;
-    opacity: 0.15;
+  &[data-index='2'] {
+    background-position: 0 -75%;
+  }
 
-    &[data-hover='true'] {
-      opacity: 0.1;
-      background-size: 100vmax;
-    }
+  &[data-index='3'] {
+    background-position: 0 -100%;
+  }
 
-    &[data-index='0'] {
-      background-position: center 45%;
-    }
+  &[data-index='4'] {
+    background-position: 0% -125%;
+  }
+}
 
-    &[data-index='1'] {
-      background-position: center 50%;
-    }
+#bkImage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  transition: 300ms;
 
-    &[data-index='2'] {
-      background-position: center 55%;
-    }
+  background-image: url('../public/about-bk.jpg');
+  background-repeat: no-repeat;
+  background-position: center 40%;
+  background-size: 110vmax;
+  opacity: 0.15;
 
-    &[data-index='3'] {
-      background-position: center 60%;
-    }
+  &[data-hover='true'] {
+    opacity: 0.1;
+    background-size: 100vmax;
+  }
 
-    &[data-index='4'] {
-      background-position: center 65%;
-    }
+  &[data-index='0'] {
+    background-position: center 45%;
+  }
+
+  &[data-index='1'] {
+    background-position: center 50%;
+  }
+
+  &[data-index='2'] {
+    background-position: center 55%;
+  }
+
+  &[data-index='3'] {
+    background-position: center 60%;
+  }
+
+  &[data-index='4'] {
+    background-position: center 65%;
   }
 }

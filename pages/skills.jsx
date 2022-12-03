@@ -2,6 +2,7 @@ import styles from '../styles/Skills.module.scss'
 import Image from 'next/image'
 import { data } from '../data/skills'
 import { useGlobalContext } from '../context/GlobalContext'
+import Link from 'next/link'
 
 const skills = () => {
   const { hoverIndex } = useGlobalContext()
@@ -15,26 +16,24 @@ const skills = () => {
 
         <div className={styles.paragraphs}>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-            error quidem maiores magnam laudantium, obcaecati deleniti mollitia
-            at nesciunt minus molestias aliquid eum. Non optio magnam modi ea
-            natus beatae?
+            I've begun my journey as a frontend developer in the summer of 2022.
+            Since then i`ve done a bit of freelance, worked on open source
+            projects and always tried to push my skills to the next level.
           </p>
 
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-            odit a libero dolore. Ipsam hic sapiente fugiat facilis sint
-            repudiandae?
+            I create production ready websites that are responsive, fast, easy
+            to use and highly interactive. The main technologies I use are html,
+            css, javascript, sass, react and nextjs.
           </p>
 
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
-            eius, amet asperiores earum hic sit.
+            Right now I'm improving what I already know and also diving into the
+            backend world.
           </p>
 
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil,
-            dolorum?
+            <Link href='/contact'>Contact me</Link> for more details.
           </p>
         </div>
       </div>

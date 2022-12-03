@@ -4,10 +4,10 @@ import emailjs from '@emailjs/browser'
 import { MdEmail } from 'react-icons/md'
 
 const contact = () => {
+  const form = useRef()
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
-  const form = useRef()
   const [sendMessage, setSendMessage] = useState(false)
 
   const sendEmail = (e) => {
@@ -100,9 +100,7 @@ const contact = () => {
         </div>
 
         <div className={styles.btnWrapper}>
-          <MdEmail
-            className={`${styles.icon} ${sendMessage && styles.active}`}
-          />
+          <MdEmail className={`${styles.icon} ${sendMessage && styles.active}`} />
           <button type='submit'>Send </button>
         </div>
       </form>
