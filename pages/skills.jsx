@@ -3,12 +3,18 @@ import Image from 'next/image'
 import { data } from '../data/skills'
 import { useGlobalContext } from '../context/GlobalContext'
 import Link from 'next/link'
+import Head from 'next/head'
 
 const skills = () => {
   const { hoverIndex } = useGlobalContext()
 
   return (
     <section className={styles.skills}>
+      <Head>
+        <title>Skills</title>
+        <meta name='description' content='Skills, technologies and tools used by Tumurug Aurel.' />
+      </Head>
+
       <div className={styles.text}>
         <h2 data-index={hoverIndex}>
           Skills & <br /> Experience

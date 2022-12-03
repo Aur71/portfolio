@@ -14,7 +14,7 @@ export const social = [
     id: 2,
     name: 'linked in',
     icon: <FaLinkedinIn />,
-    path: '#',
+    path: 'https://www.linkedin.com/in/aurel-tumurug-91344321a/',
   },
 
   {

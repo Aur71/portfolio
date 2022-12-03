@@ -2,6 +2,7 @@ import styles from '../styles/Contact.module.scss'
 import { useState, useRef, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
 import { MdEmail } from 'react-icons/md'
+import Head from 'next/head'
 
 const contact = () => {
   const form = useRef()
@@ -47,6 +48,11 @@ const contact = () => {
 
   return (
     <div className={styles.contact}>
+      <Head>
+        <title>Contact</title>
+        <meta name='description' content='Contact Tumurug Aurel.' />
+      </Head>
+
       <h2>Contact me</h2>
 
       <form onSubmit={sendEmail} ref={form}>

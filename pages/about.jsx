@@ -1,11 +1,17 @@
 import styles from '../styles/About.module.scss'
 import { useGlobalContext } from '../context/GlobalContext'
+import Head from 'next/head'
 
 const about = () => {
   const { hoverActive, hoverIndex } = useGlobalContext()
 
   return (
     <section className={styles.about}>
+      <Head>
+        <title>About</title>
+        <meta name='description' content='Things about Tumurug Aurel.' />
+      </Head>
+
       <h2>About me</h2>
       <div className={styles.paragraphs}>
         <p>
