@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <AppProvider>
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence>
         <motion.div {...animation}>
           <Layout>
             <Component {...pageProps} />
