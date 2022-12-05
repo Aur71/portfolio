@@ -11,23 +11,19 @@ function MyApp({ Component, pageProps }) {
     key: router.route,
 
     transition: {
-      duration: 0.5,
+      duration: 0.1,
       ease: "easeOut"
     },
 
     initial: {
       opacity: 0,
-      translateX: 100
     },
     animate: {
       opacity: 1,
-      translateX: 0
     },
     exit: {
       opacity: 0,
-      translateX: -100,
       transition: {
-        duration: 0.2,
         ease: 'easeOut'
       }
     },
@@ -35,7 +31,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <AppProvider>
-      <AnimatePresence>
+      <AnimatePresence exitBeforeEnter>
         <motion.div {...animation}>
           <Layout>
             <Component {...pageProps} />
