@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
-    "framer-motion": "^7.6.15",
     "next": "13.0.5",
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
