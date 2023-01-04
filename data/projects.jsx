@@ -1,11 +1,19 @@
-import Bizclarify from '../public/projects/bizclarify.png'
-import ForIT from '../public/projects/forIT.png'
-import Cocktails from '../public/projects/cocktails.png'
-import Portfolio from '../public/projects/portfolio.png'
+import Bizclarify from '../public/projects/bizclarify.png';
+import ForIT from '../public/projects/forIT.png';
+import Cocktails from '../public/projects/cocktails.png';
+import Ing from '../public/projects/ing.png';
 
 export const projects = [
   {
-    id: 1,
+    id: 4,
+    name: 'ING',
+    image: Ing,
+    live: 'https://ing-brown.vercel.app/',
+    code: 'https://github.com/Aur71/ing',
+  },
+
+  {
+    id: 2,
     name: 'Bizclarify',
     image: Bizclarify,
     live: 'https://bizclarify.com/',
@@ -13,7 +21,7 @@ export const projects = [
   },
 
   {
-    id: 2,
+    id: 3,
     name: 'ForIT',
     image: ForIT,
     live: 'https://f0rit.netlify.app/',
@@ -21,18 +29,10 @@ export const projects = [
   },
 
   {
-    id: 3,
+    id: 4,
     name: 'Cocktails',
     image: Cocktails,
     live: 'https://aur71-cocktails.netlify.app/',
     code: 'https://github.com/Aur71/react-cocktails',
   },
-
-  {
-    id: 4,
-    name: 'Portfolio',
-    image: Portfolio,
-    live: '/',
-    code: 'https://github.com/Aur71/portfolio',
-  },
-]
+];
